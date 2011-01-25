@@ -6,7 +6,7 @@ Archivist is a library that aims to make serialization in C++ a lot easier. It v
 
 Documentation on how to use Archivist will be appearing on my blog as it is finished. You can see the first installment here:
 
-* (Simple Serialization With Archivist)[http://gallantgames.com/post/2925049989/simple-serialization-with-archivist]
+* [Simple Serialization With Archivist](http://gallantgames.com/post/2925049989/simple-serialization-with-archivist)
 
 ## To Do
 
