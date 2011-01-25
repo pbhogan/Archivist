@@ -1,0 +1,321 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		170CD7B812EDE1D600827848 /* Archive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 170CD7B712EDE1D600827848 /* Archive.cpp */; };
+		170CD7E412EDE32F00827848 /* TestArchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 170CD7E312EDE32F00827848 /* TestArchive.cpp */; };
+		17195AD212B14A2400F0A68F /* TestEncodeDecode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17195AD112B14A2400F0A68F /* TestEncodeDecode.cpp */; };
+		1755ED351288DC1D0078D3F6 /* UnitTest++.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1755ED341288DC1D0078D3F6 /* UnitTest++.framework */; };
+		17B1A94412BEEF6200406475 /* TestEnum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17B1A94312BEEF6200406475 /* TestEnum.cpp */; };
+		17B1A99D12BEF2AE00406475 /* TestClassAttributes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17B1A99C12BEF2AE00406475 /* TestClassAttributes.cpp */; };
+		17B1AA4F12BEF8EF00406475 /* Array.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17B1AA4812BEF8EF00406475 /* Array.cpp */; };
+		17B1AA5012BEF8EF00406475 /* Null.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17B1AA4A12BEF8EF00406475 /* Null.cpp */; };
+		17B1AA5112BEF8EF00406475 /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17B1AA4C12BEF8EF00406475 /* Object.cpp */; };
+		17B1AAB512BEFB5100406475 /* TestContainers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17B1AAB412BEFB5100406475 /* TestContainers.cpp */; };
+		17B1C9A512B5B9240054A310 /* TestPrimitives.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17B1C9A412B5B9240054A310 /* TestPrimitives.cpp */; };
+		17B1CAD612B70C6C0054A310 /* StreamWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17B1CAD512B70C6C0054A310 /* StreamWriter.cpp */; };
+		17B1CB9912B713900054A310 /* StreamReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17B1CB9812B713900054A310 /* StreamReader.cpp */; };
+		17DAD09F1288D96100C9A4CC /* Unknown.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17DAD0991288D96100C9A4CC /* Unknown.cpp */; };
+		17FDD3D712B99DDA00BDCF15 /* TestStreamReaderWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17FDD3D612B99DDA00BDCF15 /* TestStreamReaderWriter.cpp */; };
+		8DD76F650486A84900D96B5E /* Example.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* Example.cpp */; settings = {ATTRIBUTES = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		1767441B122DA782009CC423 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			filePatterns = "*.h.erb";
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+				"${INPUT_FILE_BASE}",
+			);
+			script = "/usr/bin/erb ${INPUT_FILE_PATH} > ${INPUT_FILE_BASE}; touch ${INPUT_FILE_BASE}";
+		};
+/* End PBXBuildRule section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8DD76F690486A84900D96B5E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		08FB7796FE84155DC02AAC07 /* Example.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Example.cpp; sourceTree = "<group>"; };
+		170CD7B612EDE1D600827848 /* Archive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Archive.h; sourceTree = "<group>"; };
+		170CD7B712EDE1D600827848 /* Archive.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Archive.cpp; sourceTree = "<group>"; };
+		170CD7E312EDE32F00827848 /* TestArchive.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestArchive.cpp; sourceTree = "<group>"; };
+		17195AD112B14A2400F0A68F /* TestEncodeDecode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestEncodeDecode.cpp; sourceTree = "<group>"; };
+		17195B4B12B176FF00F0A68F /* StreamReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamReader.h; sourceTree = "<group>"; };
+		1755ED341288DC1D0078D3F6 /* UnitTest++.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "UnitTest++.framework"; path = "/Library/Frameworks/UnitTest++.framework"; sourceTree = "<absolute>"; };
+		176436B0128A26A200E9D465 /* Encode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Encode.h; sourceTree = "<group>"; };
+		176436B1128A29DB00E9D465 /* Decode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Decode.h; sourceTree = "<group>"; };
+		179ECF3D1288DE080073A01C /* StreamWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamWriter.h; sourceTree = "<group>"; };
+		17B1A8C112BEC83D00406475 /* Enum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enum.h; sourceTree = "<group>"; };
+		17B1A91012BECC6700406475 /* ArchivistCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArchivistCore.h; sourceTree = "<group>"; };
+		17B1A91112BECC6700406475 /* ArchivistMore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArchivistMore.h; sourceTree = "<group>"; };
+		17B1A94312BEEF6200406475 /* TestEnum.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestEnum.cpp; sourceTree = "<group>"; };
+		17B1A99C12BEF2AE00406475 /* TestClassAttributes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestClassAttributes.cpp; sourceTree = "<group>"; };
+		17B1AA4812BEF8EF00406475 /* Array.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Array.cpp; sourceTree = "<group>"; };
+		17B1AA4912BEF8EF00406475 /* Array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Array.h; sourceTree = "<group>"; };
+		17B1AA4A12BEF8EF00406475 /* Null.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Null.cpp; sourceTree = "<group>"; };
+		17B1AA4B12BEF8EF00406475 /* Null.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Null.h; sourceTree = "<group>"; };
+		17B1AA4C12BEF8EF00406475 /* Object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Object.cpp; sourceTree = "<group>"; };
+		17B1AA4D12BEF8EF00406475 /* Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Object.h; sourceTree = "<group>"; };
+		17B1AA4E12BEF8EF00406475 /* Primitive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Primitive.h; sourceTree = "<group>"; };
+		17B1AAB412BEFB5100406475 /* TestContainers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestContainers.cpp; sourceTree = "<group>"; };
+		17B1C9A412B5B9240054A310 /* TestPrimitives.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestPrimitives.cpp; sourceTree = "<group>"; };
+		17B1CAD512B70C6C0054A310 /* StreamWriter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StreamWriter.cpp; sourceTree = "<group>"; };
+		17B1CB9812B713900054A310 /* StreamReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StreamReader.cpp; sourceTree = "<group>"; };
+		17DAD08B1288D96100C9A4CC /* Archivable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Archivable.h; sourceTree = "<group>"; };
+		17DAD08C1288D96100C9A4CC /* Archivist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Archivist.h; sourceTree = "<group>"; };
+		17DAD08D1288D96100C9A4CC /* Attributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Attributes.h; sourceTree = "<group>"; };
+		17DAD08E1288D96100C9A4CC /* Attributes.h.erb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Attributes.h.erb; sourceTree = "<group>"; };
+		17DAD08F1288D96100C9A4CC /* Exception.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exception.h; sourceTree = "<group>"; };
+		17DAD0901288D96100C9A4CC /* Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Internal.h; sourceTree = "<group>"; };
+		17DAD0991288D96100C9A4CC /* Unknown.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Unknown.cpp; sourceTree = "<group>"; };
+		17DAD09A1288D96100C9A4CC /* Unknown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Unknown.h; sourceTree = "<group>"; };
+		17DAD09B1288D96100C9A4CC /* Visitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Visitor.h; sourceTree = "<group>"; };
+		17FDD3D612B99DDA00BDCF15 /* TestStreamReaderWriter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestStreamReaderWriter.cpp; sourceTree = "<group>"; };
+		8DD76F6C0486A84900D96B5E /* Archivist */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Archivist; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DD76F660486A84900D96B5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1755ED351288DC1D0078D3F6 /* UnitTest++.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* Archivist */ = {
+			isa = PBXGroup;
+			children = (
+				08FB7796FE84155DC02AAC07 /* Example.cpp */,
+				17195ACE12B149F600F0A68F /* Tests */,
+				17DAD08A1288D96100C9A4CC /* Source */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+				1755ED341288DC1D0078D3F6 /* UnitTest++.framework */,
+			);
+			name = Archivist;
+			sourceTree = "<group>";
+		};
+		17195ACE12B149F600F0A68F /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				17195AD112B14A2400F0A68F /* TestEncodeDecode.cpp */,
+				17B1C9A412B5B9240054A310 /* TestPrimitives.cpp */,
+				17FDD3D612B99DDA00BDCF15 /* TestStreamReaderWriter.cpp */,
+				17B1A94312BEEF6200406475 /* TestEnum.cpp */,
+				17B1A99C12BEF2AE00406475 /* TestClassAttributes.cpp */,
+				17B1AAB412BEFB5100406475 /* TestContainers.cpp */,
+				170CD7E312EDE32F00827848 /* TestArchive.cpp */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		17DAD08A1288D96100C9A4CC /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				17DAD08B1288D96100C9A4CC /* Archivable.h */,
+				170CD7B712EDE1D600827848 /* Archive.cpp */,
+				170CD7B612EDE1D600827848 /* Archive.h */,
+				17DAD08C1288D96100C9A4CC /* Archivist.h */,
+				17B1A91012BECC6700406475 /* ArchivistCore.h */,
+				17B1A91112BECC6700406475 /* ArchivistMore.h */,
+				17B1AA4812BEF8EF00406475 /* Array.cpp */,
+				17B1AA4912BEF8EF00406475 /* Array.h */,
+				17DAD08D1288D96100C9A4CC /* Attributes.h */,
+				17DAD08E1288D96100C9A4CC /* Attributes.h.erb */,
+				176436B1128A29DB00E9D465 /* Decode.h */,
+				176436B0128A26A200E9D465 /* Encode.h */,
+				17B1A8C112BEC83D00406475 /* Enum.h */,
+				17DAD08F1288D96100C9A4CC /* Exception.h */,
+				17DAD0901288D96100C9A4CC /* Internal.h */,
+				17B1AA4A12BEF8EF00406475 /* Null.cpp */,
+				17B1AA4B12BEF8EF00406475 /* Null.h */,
+				17B1AA4C12BEF8EF00406475 /* Object.cpp */,
+				17B1AA4D12BEF8EF00406475 /* Object.h */,
+				17B1AA4E12BEF8EF00406475 /* Primitive.h */,
+				17B1CB9812B713900054A310 /* StreamReader.cpp */,
+				17195B4B12B176FF00F0A68F /* StreamReader.h */,
+				17B1CAD512B70C6C0054A310 /* StreamWriter.cpp */,
+				179ECF3D1288DE080073A01C /* StreamWriter.h */,
+				17DAD0991288D96100C9A4CC /* Unknown.cpp */,
+				17DAD09A1288D96100C9A4CC /* Unknown.h */,
+				17DAD09B1288D96100C9A4CC /* Visitor.h */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DD76F6C0486A84900D96B5E /* Archivist */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8DD76F620486A84900D96B5E /* Archivist */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB923108733DC60010E9CD /* Build configuration list for PBXNativeTarget "Archivist" */;
+			buildPhases = (
+				8DD76F640486A84900D96B5E /* Sources */,
+				8DD76F660486A84900D96B5E /* Frameworks */,
+				8DD76F690486A84900D96B5E /* CopyFiles */,
+			);
+			buildRules = (
+				1767441B122DA782009CC423 /* PBXBuildRule */,
+			);
+			dependencies = (
+			);
+			name = Archivist;
+			productInstallPath = "$(HOME)/bin";
+			productName = Archivist;
+			productReference = 8DD76F6C0486A84900D96B5E /* Archivist */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "Archivist" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 08FB7794FE84155DC02AAC07 /* Archivist */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8DD76F620486A84900D96B5E /* Archivist */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DD76F640486A84900D96B5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DD76F650486A84900D96B5E /* Example.cpp in Sources */,
+				17DAD09F1288D96100C9A4CC /* Unknown.cpp in Sources */,
+				17195AD212B14A2400F0A68F /* TestEncodeDecode.cpp in Sources */,
+				17B1C9A512B5B9240054A310 /* TestPrimitives.cpp in Sources */,
+				17B1CAD612B70C6C0054A310 /* StreamWriter.cpp in Sources */,
+				17B1CB9912B713900054A310 /* StreamReader.cpp in Sources */,
+				17FDD3D712B99DDA00BDCF15 /* TestStreamReaderWriter.cpp in Sources */,
+				17B1A94412BEEF6200406475 /* TestEnum.cpp in Sources */,
+				17B1A99D12BEF2AE00406475 /* TestClassAttributes.cpp in Sources */,
+				17B1AA4F12BEF8EF00406475 /* Array.cpp in Sources */,
+				17B1AA5012BEF8EF00406475 /* Null.cpp in Sources */,
+				17B1AA5112BEF8EF00406475 /* Object.cpp in Sources */,
+				17B1AAB512BEFB5100406475 /* TestContainers.cpp in Sources */,
+				170CD7B812EDE1D600827848 /* Archive.cpp in Sources */,
+				170CD7E412EDE32F00827848 /* TestArchive.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB923208733DC60010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = Archivist;
+			};
+			name = Debug;
+		};
+		1DEB923308733DC60010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = Archivist;
+			};
+			name = Release;
+		};
+		1DEB923608733DC60010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = "";
+			};
+			name = Debug;
+		};
+		1DEB923708733DC60010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB923108733DC60010E9CD /* Build configuration list for PBXNativeTarget "Archivist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB923208733DC60010E9CD /* Debug */,
+				1DEB923308733DC60010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "Archivist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB923608733DC60010E9CD /* Debug */,
+				1DEB923708733DC60010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

@@ -1,0 +1,115 @@
+/*
+ *  Attributes.h
+ *  Archivist
+ *
+ *  Copyright 2010 Gallant Games. All Rights Reserved.
+ *
+ */
+
+#pragma once
+#ifndef _G_ATTRIBUTES_H_
+#define _G_ATTRIBUTES_H_
+
+#include "Internal.h"
+#include "Encode.h"
+#include "Object.h"
+<% GENERATION_LIMIT = 64 %>
+
+#define COUNT_ARGS_FILL() <%GENERATION_LIMIT.downto(1) {|i|%><%=i%>, <%}%>0
+#define COUNT_ARGS__( <%1.upto(GENERATION_LIMIT) {|i|%>_<%=i%>, <%}%>N, ... ) N 
+#define COUNT_ARGS_(...) COUNT_ARGS__( __VA_ARGS__ )
+#define COUNT_ARGS(...) COUNT_ARGS_( __VA_ARGS__, COUNT_ARGS_FILL() )
+
+
+#define TO_STRING_0( )
+<%1.upto(GENERATION_LIMIT) {|i|%>#define TO_STRING_<%=i%>( a0<%1.upto(i-1) {|j|%>, a<%=j%><%}%> ) #a0<%1.upto(i-1) {|j|%>, #a<%=j%><%}%>
+<%}%>#define TO_STRING__( n, ... ) TO_STRING_##n( __VA_ARGS__ )
+#define TO_STRING_( n, ... ) TO_STRING__( n, __VA_ARGS__ )
+#define TO_STRING( ... ) TO_STRING_( COUNT_ARGS(__VA_ARGS__), __VA_ARGS__ )
+
+
+#define ArchiveAttributes( ... ) \
+	void Encode( Archivist::Object & object ) const \
+	{ \
+		const char * names[] = { TO_STRING( __VA_ARGS__ ), NULL }; \
+		Archivist::GetProxy( __VA_ARGS__ ).Encode( object, names ); \
+		EncodeNotification( *this, object ); \
+	} \
+\
+	Archivist::Object Encode( void ) const \
+	{ \
+		Archivist::Object object; \
+		Encode( object ); \
+		return object; \
+	} \
+\
+	void Decode( const Archivist::Object & object ) \
+	{ \
+		const char * names[] = { TO_STRING( __VA_ARGS__ ), NULL }; \
+		Archivist::GetProxy( __VA_ARGS__ ).Decode( object, names ); \
+		DecodeNotification( *this, object ); \
+	}
+
+
+namespace Archivist
+{
+
+template <typename A0 = void<%1.upto(GENERATION_LIMIT+1) {|i|%>, typename A<%=i%> = void<%}%>>
+struct DefineAttributes;
+
+template <>
+struct DefineAttributes<>
+{
+	typedef DefineAttributes<> value_type;
+
+	void Encode( Archivist::Object & object, const char * names[] ) const
+	{
+	}
+
+	void Decode( const Archivist::Object & object, const char * names[] )
+	{
+	}
+};
+
+<%0.upto(GENERATION_LIMIT) {|i|%>
+template <typename A0<%1.upto(i) {|j|%>, typename A<%=j%><%}%>>
+struct DefineAttributes<A0<%1.upto(i) {|j|%>, A<%=j%><%}%>>
+{
+	typedef DefineAttributes<A0<%1.upto(i) {|j|%>, A<%=j%><%}%>> value_type;
+
+	DefineAttributes( A0 & _a0<%1.upto(i) {|j|%>, A<%=j%> & _a<%=j%><%}%> )
+	: a0(_a0)<%1.upto(i) {|j|%>, a<%=j%>(_a<%=j%>)<%}%>
+	{
+	}
+
+	void Encode( Archivist::Object & object, const char * names[] ) const
+	{	<%0.upto(i) {|j|%>
+		object[ names[<%=j%>] ] = Archivist::Encode( a<%=j%> ); <%}%>
+	}
+
+	void Decode( const Archivist::Object & object, const char * names[] )
+	{	<%0.upto(i) {|j|%>
+		Archivist::Decode( object[ names[<%=j%>] ], a<%=j%> ); <%}%>
+	}
+<%0.upto(i) {|j|%>
+	A<%=j%> & a<%=j%>;<%}%>
+};
+<%}%>
+
+inline DefineAttributes<> GetProxy( void )
+{
+	return DefineAttributes<>();
+}
+<%0.upto(GENERATION_LIMIT) {|i|%>
+template <typename A0<%1.upto(i) {|j|%>, typename A<%=j%><%}%>>
+DefineAttributes<A0<%1.upto(i) {|j|%>, A<%=j%><%}%>> GetProxy( A0 & a0<%1.upto(i) {|j|%>, A<%=j%> & a<%=j%><%}%> )
+{
+	return DefineAttributes<A0<%1.upto(i) {|j|%>, A<%=j%><%}%>>( a0<%1.upto(i) {|j|%>, a<%=j%><%}%> );
+}
+<%}%>
+
+}  // namespace
+
+
+#endif // _G_DEFINE_H_
+
