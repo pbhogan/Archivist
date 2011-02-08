@@ -22,7 +22,7 @@
 		17B1CB9912B713900054A310 /* StreamReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17B1CB9812B713900054A310 /* StreamReader.cpp */; };
 		17DAD09F1288D96100C9A4CC /* Unknown.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17DAD0991288D96100C9A4CC /* Unknown.cpp */; };
 		17FDD3D712B99DDA00BDCF15 /* TestStreamReaderWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17FDD3D612B99DDA00BDCF15 /* TestStreamReaderWriter.cpp */; };
-		8DD76F650486A84900D96B5E /* Example.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* Example.cpp */; settings = {ATTRIBUTES = (); }; };
+		8DD76F650486A84900D96B5E /* Example2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* Example2.cpp */; settings = {ATTRIBUTES = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -52,7 +52,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		08FB7796FE84155DC02AAC07 /* Example.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Example.cpp; sourceTree = "<group>"; };
+		08FB7796FE84155DC02AAC07 /* Example2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Example2.cpp; sourceTree = "<group>"; };
 		170CD7B612EDE1D600827848 /* Archive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Archive.h; sourceTree = "<group>"; };
 		170CD7B712EDE1D600827848 /* Archive.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Archive.cpp; sourceTree = "<group>"; };
 		170CD7E312EDE32F00827848 /* TestArchive.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestArchive.cpp; sourceTree = "<group>"; };
@@ -106,7 +106,7 @@
 		08FB7794FE84155DC02AAC07 /* Archivist */ = {
 			isa = PBXGroup;
 			children = (
-				08FB7796FE84155DC02AAC07 /* Example.cpp */,
+				08FB7796FE84155DC02AAC07 /* Example2.cpp */,
 				17195ACE12B149F600F0A68F /* Tests */,
 				17DAD08A1288D96100C9A4CC /* Source */,
 				1AB674ADFE9D54B511CA2CBB /* Products */,
@@ -219,7 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DD76F650486A84900D96B5E /* Example.cpp in Sources */,
+				8DD76F650486A84900D96B5E /* Example2.cpp in Sources */,
 				17DAD09F1288D96100C9A4CC /* Unknown.cpp in Sources */,
 				17195AD212B14A2400F0A68F /* TestEncodeDecode.cpp in Sources */,
 				17B1C9A512B5B9240054A310 /* TestPrimitives.cpp in Sources */,
