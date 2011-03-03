@@ -13,9 +13,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "17A77863132021DE00EA956B"
-               BuildableName = "Archivist.framework"
-               BlueprintName = "Archivist"
+               BlueprintIdentifier = "17A778BA13202EDB00EA956B"
+               BuildableName = "Tests"
+               BlueprintName = "Tests"
                ReferencedContainer = "container:Archivist.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -36,7 +36,16 @@
       displayScale = "1.00"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Release">
+      buildConfiguration = "Debug">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "17A778BA13202EDB00EA956B"
+            BuildableName = "Tests"
+            BlueprintName = "Tests"
+            ReferencedContainer = "container:Archivist.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -47,6 +56,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "17A778BA13202EDB00EA956B"
+            BuildableName = "Tests"
+            BlueprintName = "Tests"
+            ReferencedContainer = "container:Archivist.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

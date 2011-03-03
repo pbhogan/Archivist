@@ -27,10 +27,10 @@ inline void DecodeNumber( const Unknown & unknown, T & into )
 	switch (unknown.Type())
 	{
 		case Type::Unsigned:
-			into = ((Unsigned) unknown).Value();
+			into = (T) ((Unsigned) unknown).Value();
 			break;
 		case Type::Signed:
-			into = ((Signed) unknown).Value();
+			into = (T) ((Signed) unknown).Value();
 			break;
 		case Type::Float:
 			into = ((Float) unknown).Value();

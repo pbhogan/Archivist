@@ -6,8 +6,8 @@
  *
  */
 
+#include "Unknown.h"
 #include "Visitor.h"
-#include "Exception.h"
 
 
 namespace Archivist
@@ -233,15 +233,15 @@ const T & Unknown::CastTo( void ) const
 }
 
 
-
 template< typename T >
-T & Unknown::ConvertTo( void ) 
+T & Unknown::ConvertTo( void )
 {
 	ConvertVisitor<T> convertVisitor;
 	proxy->VisitWith( convertVisitor );
 	if (convertVisitor.DidFail())
 	{
 		throw Exception( "Bad Conversion" );
+        
 		//*this = T();
 		//proxy->VisitWith( convertVisitor );
 	}

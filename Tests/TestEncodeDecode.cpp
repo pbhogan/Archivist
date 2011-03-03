@@ -21,13 +21,15 @@ SUITE( EncodeDecode )
 	TEST( NullTypeThrowsExceptionWhenCast )
 	{
 		Unknown u = Null();
-		CHECK_THROW( (Object) u, Exception );
-		CHECK_THROW( (Array) u, Exception );
-		CHECK_THROW( (Unsigned) u, Exception );
-		CHECK_THROW( (Signed) u, Exception );
-		CHECK_THROW( (Float) u, Exception );
-		CHECK_THROW( (Boolean) u, Exception );
-		CHECK_THROW( (String) u, Exception );
+        Unknown v;
+        
+		CHECK_THROW( v = (Object) u, exception );
+		CHECK_THROW( v = (Array) u, exception );
+		CHECK_THROW( v = (Unsigned) u, exception );
+		CHECK_THROW( v = (Signed) u, exception );
+		CHECK_THROW( v = (Float) u, exception );
+		CHECK_THROW( v = (Boolean) u, exception );
+		CHECK_THROW( v = (String) u, exception );
 	}
 
 	
