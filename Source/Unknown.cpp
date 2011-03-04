@@ -8,6 +8,7 @@
 
 #include "Unknown.h"
 #include "Visitor.h"
+#include "Exception.h"
 
 
 namespace Archivist
