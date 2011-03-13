@@ -171,6 +171,21 @@ inline void Decode( const Unknown & unknown, std::map<T,S> & container )
 }
 
 
+template< typename T >
+inline void Decode( const Unknown & unknown, std::map<std::string,T> & container )
+{
+	const Object & object = unknown;
+	if (!container.empty()) throw Exception( "Container Not Empty" );
+	for (Object::ConstIterator it = object.Begin(); it != object.End(); ++it)
+	{		
+		std::string key = it->first;
+		T val;
+		Decode( it->second, val );
+		container[ key ] = val;
+	}
+}
+
+
 template< typename T, typename S >
 inline void Decode( const Unknown & unknown, std::multimap<T,S> & container )
 {
@@ -182,7 +197,22 @@ inline void Decode( const Unknown & unknown, std::multimap<T,S> & container )
 		S val;
 		Decode( (*it)[0], key );
 		Decode( (*it)[1], val );
-		container[ key ] = val;
+		container.insert( std::pair<T,S>( key, val ) );
+	}
+}
+
+
+template< typename T >
+inline void Decode( const Unknown & unknown, std::multimap<std::string,T> & container )
+{
+	const Object & object = unknown;
+	if (!container.empty()) throw Exception( "Container Not Empty" );
+	for (Object::ConstIterator it = object.Begin(); it != object.End(); ++it)
+	{		
+		std::string key = it->first;
+		T val;
+		Decode( it->second, val );
+		container.insert( std::pair<std::string,T>( key, val ) );
 	}
 }
 

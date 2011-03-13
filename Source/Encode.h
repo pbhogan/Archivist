@@ -144,6 +144,19 @@ inline Unknown Encode( const std::map<T,S> & container )
 }
 
 
+template< typename T >
+inline Unknown Encode( const std::map<std::string,T> & container ) 
+{ 
+	Object object;
+	typename std::map<std::string,T>::const_iterator it;
+	for (it = container.begin(); it != container.end(); ++it)
+	{
+		object.Insert( it->first, Encode(it->second) );
+	}
+	return object;
+}
+
+
 template< typename T, typename S >
 inline Unknown Encode( const std::multimap<T,S> & container ) 
 { 
@@ -154,6 +167,19 @@ inline Unknown Encode( const std::multimap<T,S> & container )
 		array.Insert( Encode( *it ) );
 	}
 	return array;
+}
+
+
+template< typename T >
+inline Unknown Encode( const std::multimap<std::string,T> & container ) 
+{ 
+	Object object;
+	typename std::multimap<std::string,T>::const_iterator it;
+	for (it = container.begin(); it != container.end(); ++it)
+	{
+		object.Insert( it->first, Encode(it->second) );
+	}
+	return object;
 }
 
 

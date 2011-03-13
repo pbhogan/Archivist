@@ -124,17 +124,58 @@ SUITE( Containers )
 	}
 	
 	
+	TEST( MapWithStringKey )
+	{
+		std::map< std::string, int > c1, c2;		
+		c1[ std::string("a") ] = 1;
+		c1[ std::string("b") ] = 2;
+		c1[ std::string("c") ] = 3;
+
+		Unknown u = Encode( c1 );
+		CHECK_EQUAL( Type::Object, u.Type() );
+
+		Decode( u, c2 );		
+		CHECK_EQUAL( c1.size(), c2.size() );	
+		std::map< std::string, int >::iterator i1, i2;
+		for (i1 = c1.begin(), i2 = c2.begin(); i1 != c1.end(); ++i1, ++i2) 
+		{
+			CHECK_EQUAL( i1->first, i2->first );
+			CHECK_EQUAL( i1->second, i2->second );
+		}
+	}
+	
+	
 	TEST( MultiMap )
 	{
-		std::map< int, int > c1, c2;		
-		for (int i=0; i<10; i++) c1[ i ] = 10 - i;
+		std::multimap< int, int > c1, c2;		
+		for (int i=0; i<10; i++) c1.insert( std::pair< int, int >( i, 10 - i ) );
 
 		Unknown u = Encode( c1 );
 		CHECK_EQUAL( Type::Array, u.Type() );
 
 		Decode( u, c2 );		
 		CHECK_EQUAL( c1.size(), c2.size() );	
-		std::map< int, int >::iterator i1, i2;
+		std::multimap< int, int >::iterator i1, i2;
+		for (i1 = c1.begin(), i2 = c2.begin(); i1 != c1.end(); ++i1, ++i2) 
+		{
+			CHECK_EQUAL( i1->first, i2->first );
+			CHECK_EQUAL( i1->second, i2->second );
+		}
+	}
+	
+	TEST( MultiMapWithStringKey )
+	{
+		std::multimap< std::string, int > c1, c2;		
+		c1.insert( std::pair< std::string, int >( "a", 1 ) );
+		c1.insert( std::pair< std::string, int >( "b", 2 ) );
+		c1.insert( std::pair< std::string, int >( "c", 3 ) );
+
+		Unknown u = Encode( c1 );
+		CHECK_EQUAL( Type::Object, u.Type() );
+
+		Decode( u, c2 );		
+		CHECK_EQUAL( c1.size(), c2.size() );	
+		std::multimap< std::string, int >::iterator i1, i2;
 		for (i1 = c1.begin(), i2 = c2.begin(); i1 != c1.end(); ++i1, ++i2) 
 		{
 			CHECK_EQUAL( i1->first, i2->first );
