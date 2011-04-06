@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		177DC98C134CBB1C000A163E /* Attributes.h.erb in Sources */ = {isa = PBXBuildFile; fileRef = 17A77889132024C800EA956B /* Attributes.h.erb */; };
+		177DC992134CBD1E000A163E /* TestClassSize.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 177DC98E134CBC77000A163E /* TestClassSize.cpp */; };
+		177DC997134CBE31000A163E /* TestClassPolymorphism.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 177DC993134CBE1D000A163E /* TestClassPolymorphism.cpp */; };
 		17A77872132021DF00EA956B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 17A77870132021DF00EA956B /* InfoPlist.strings */; };
 		17A7789B132024C800EA956B /* Archivable.h in Headers */ = {isa = PBXBuildFile; fileRef = 17A77880132024C800EA956B /* Archivable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		17A7789C132024C800EA956B /* Archive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17A77881132024C800EA956B /* Archive.cpp */; };
@@ -47,6 +50,20 @@
 		17A778E8132033DD00EA956B /* UnitTest++.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17A778E7132033DD00EA956B /* UnitTest++.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXBuildRule section */
+		177DC98D134CBB2D000A163E /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			filePatterns = "*.h.erb";
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+				"${INPUT_FILE_DIR}/${INPUT_FILE_BASE}",
+			);
+			script = "/usr/bin/erb ${INPUT_FILE_PATH} > ${INPUT_FILE_DIR}/${INPUT_FILE_BASE}";
+		};
+/* End PBXBuildRule section */
+
 /* Begin PBXContainerItemProxy section */
 		17A778DD13202F9900EA956B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -70,6 +87,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		177DC98E134CBC77000A163E /* TestClassSize.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestClassSize.cpp; sourceTree = "<group>"; };
+		177DC993134CBE1D000A163E /* TestClassPolymorphism.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestClassPolymorphism.cpp; sourceTree = "<group>"; };
 		17A77864132021DF00EA956B /* Archivist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Archivist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A7786F132021DF00EA956B /* Archivist-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Archivist-Info.plist"; sourceTree = "<group>"; };
 		17A77871132021DF00EA956B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -219,6 +238,8 @@
 				17A778C413202F0400EA956B /* RunTests.cpp */,
 				17A778C513202F0400EA956B /* TestArchive.cpp */,
 				17A778C613202F0400EA956B /* TestClassAttributes.cpp */,
+				177DC993134CBE1D000A163E /* TestClassPolymorphism.cpp */,
+				177DC98E134CBC77000A163E /* TestClassSize.cpp */,
 				17A778C713202F0400EA956B /* TestContainers.cpp */,
 				17A778C813202F0400EA956B /* TestEncodeDecode.cpp */,
 				17A778C913202F0400EA956B /* TestEnum.cpp */,
@@ -270,6 +291,7 @@
 				17A77862132021DE00EA956B /* Resources */,
 			);
 			buildRules = (
+				177DC98D134CBB2D000A163E /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -336,6 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				177DC98C134CBB1C000A163E /* Attributes.h.erb in Sources */,
 				17A7789C132024C800EA956B /* Archive.cpp in Sources */,
 				17A778A1132024C800EA956B /* Array.cpp in Sources */,
 				17A778AA132024C800EA956B /* Null.cpp in Sources */,
@@ -353,6 +376,8 @@
 				17A778D413202F8700EA956B /* RunTests.cpp in Sources */,
 				17A778D513202F8700EA956B /* TestArchive.cpp in Sources */,
 				17A778D613202F8700EA956B /* TestClassAttributes.cpp in Sources */,
+				177DC997134CBE31000A163E /* TestClassPolymorphism.cpp in Sources */,
+				177DC992134CBD1E000A163E /* TestClassSize.cpp in Sources */,
 				17A778D713202F8700EA956B /* TestContainers.cpp in Sources */,
 				17A778D813202F8700EA956B /* TestEncodeDecode.cpp in Sources */,
 				17A778D913202F8700EA956B /* TestEnum.cpp in Sources */,

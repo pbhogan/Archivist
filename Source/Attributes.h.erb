@@ -49,6 +49,29 @@
 		Archivist::GetProxy( __VA_ARGS__ ).Decode( object, names ); \
 		DecodeNotification( *this, object ); \
 	}
+	
+	
+#define ArchiveAttributesBase( ... ) \
+	virtual void Encode( Archivist::Object & object ) const \
+	{ \
+		const char * names[] = { TO_STRING( __VA_ARGS__ ), NULL }; \
+		Archivist::GetProxy( __VA_ARGS__ ).Encode( object, names ); \
+		EncodeNotification( *this, object ); \
+	} \
+\
+	virtual Archivist::Object Encode( void ) const \
+	{ \
+		Archivist::Object object; \
+		Encode( object ); \
+		return object; \
+	} \
+\
+	virtual void Decode( const Archivist::Object & object ) \
+	{ \
+		const char * names[] = { TO_STRING( __VA_ARGS__ ), NULL }; \
+		Archivist::GetProxy( __VA_ARGS__ ).Decode( object, names ); \
+		DecodeNotification( *this, object ); \
+	}
 
 
 namespace Archivist
