@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		172247311382B9C200758A02 /* TestDataMigrations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 172247301382B9C200758A02 /* TestDataMigrations.cpp */; };
 		177DC98C134CBB1C000A163E /* Attributes.h.erb in Sources */ = {isa = PBXBuildFile; fileRef = 17A77889132024C800EA956B /* Attributes.h.erb */; };
 		177DC992134CBD1E000A163E /* TestClassSize.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 177DC98E134CBC77000A163E /* TestClassSize.cpp */; };
 		177DC997134CBE31000A163E /* TestClassPolymorphism.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 177DC993134CBE1D000A163E /* TestClassPolymorphism.cpp */; };
@@ -87,6 +88,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		172247301382B9C200758A02 /* TestDataMigrations.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestDataMigrations.cpp; sourceTree = "<group>"; };
 		177DC98E134CBC77000A163E /* TestClassSize.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestClassSize.cpp; sourceTree = "<group>"; };
 		177DC993134CBE1D000A163E /* TestClassPolymorphism.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestClassPolymorphism.cpp; sourceTree = "<group>"; };
 		17A77864132021DF00EA956B /* Archivist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Archivist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -241,6 +243,7 @@
 				177DC993134CBE1D000A163E /* TestClassPolymorphism.cpp */,
 				177DC98E134CBC77000A163E /* TestClassSize.cpp */,
 				17A778C713202F0400EA956B /* TestContainers.cpp */,
+				172247301382B9C200758A02 /* TestDataMigrations.cpp */,
 				17A778C813202F0400EA956B /* TestEncodeDecode.cpp */,
 				17A778C913202F0400EA956B /* TestEnum.cpp */,
 				17A778CA13202F0400EA956B /* TestPrimitives.cpp */,
@@ -383,6 +386,7 @@
 				17A778D913202F8700EA956B /* TestEnum.cpp in Sources */,
 				17A778DA13202F8700EA956B /* TestPrimitives.cpp in Sources */,
 				17A778DB13202F8700EA956B /* TestStreamReaderWriter.cpp in Sources */,
+				172247311382B9C200758A02 /* TestDataMigrations.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

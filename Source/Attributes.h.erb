@@ -111,8 +111,10 @@ struct DefineAttributes<A0<%1.upto(i) {|j|%>, A<%=j%><%}%>>
 	}
 
 	void Decode( const Archivist::Object & object, const char * names[] )
-	{	<%0.upto(i) {|j|%>
-		Archivist::Decode( object[ names[<%=j%>] ], a<%=j%> ); <%}%>
+	{	
+		Object::ConstIterator iter; <%0.upto(i) {|j|%>
+		iter = object.Find( names[<%=j%>] );
+		if (iter != object.End()) Archivist::Decode( iter->second, a<%=j%> ); <%}%>
 	}
 <%0.upto(i) {|j|%>
 	A<%=j%> & a<%=j%>;<%}%>
