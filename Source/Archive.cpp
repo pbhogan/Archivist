@@ -44,6 +44,12 @@ void Archive::Save( const Unknown & unknown )
 const Unknown Archive::Load( void )
 {
 	std::ifstream stream( fileName.c_str() ); // , ifstream::binary
+	
+	if (!stream)
+	{
+		return Null();
+	}
+	
 	stream.seekg( 164 ); // skip plist header
 	
 	Unknown unknown;

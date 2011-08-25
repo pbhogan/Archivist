@@ -33,6 +33,14 @@ public:
 
 SUITE( Enum )
 {
+	TEST( LoadingNonExistantArchiveReturnsNull )
+	{
+		Unknown u = Archive::Load( "does_not_exist.plist" );
+		
+		CHECK( u.IsNull() );
+	}
+
+
 	TEST( ArchiveSaves )
 	{
 		Thing t;
