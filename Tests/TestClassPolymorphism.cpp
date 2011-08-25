@@ -54,7 +54,7 @@ SUITE( ClassPolymorphism )
 	}
 
 
-	TEST( ArchiveAttributesBaseIsolymorphic )
+	TEST( ArchiveAttributesBaseIsPolymorphic )
 	{		
 		Vector2 v2;
 		Vector3 v3;
