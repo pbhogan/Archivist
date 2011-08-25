@@ -25,6 +25,18 @@ INLINE Type::Enum TypeOf( const Boolean & element ) { return Type::Boolean; }
 INLINE Type::Enum TypeOf( const String & element ) { return Type::String; }
 
 
+const char * TypeName[] = {
+	"Null",
+	"Object",
+	"Array",
+	"Unsigned",
+	"Signed",
+	"Float",
+	"Boolean",
+	"String"
+};
+
+
 template< typename T >
 class Unknown::CastVisitor : public ConstVisitor
 {
@@ -228,7 +240,10 @@ const T & Unknown::CastTo( void ) const
 	proxy->VisitWith( castVisitor );
 	if (castVisitor.DidFail())
 	{
-		throw Exception( "Bad Cast" );
+		static char msg[64];
+		Unknown t = T();
+		sprintf( msg, "Cannot cast %s to %s.", TypeName[Type()], TypeName[t.Type()] );
+		throw Exception( msg );
 	}
 	return castVisitor.Value();
 }
@@ -241,7 +256,10 @@ T & Unknown::ConvertTo( void )
 	proxy->VisitWith( convertVisitor );
 	if (convertVisitor.DidFail())
 	{
-		throw Exception( "Bad Conversion" );
+		static char msg[64];
+		Unknown t = T();
+		sprintf( msg, "Cannot convert %s to %s.", TypeName[Type()], TypeName[t.Type()] );
+		throw Exception( msg );
         
 		//*this = T();
 		//proxy->VisitWith( convertVisitor );
