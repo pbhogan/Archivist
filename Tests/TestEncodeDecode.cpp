@@ -2,6 +2,7 @@
 #include "Archivist.h"
 using namespace Archivist;
 
+#include <math.h>
 #include <limits>
 using namespace std;
 
@@ -205,12 +206,10 @@ SUITE( EncodeDecode )
 		Decode( u, f2 );
 		CHECK_EQUAL( f1, f2 );
 	}
-	
+
 	
 	TEST( EncodeDecodeNaNFloat )
-	{
-		#define isnan(x) ((x) != (x))
-	
+	{	
 		float32 f1 = numeric_limits<float32>::quiet_NaN();
 		float32 f2 = 0;
 		

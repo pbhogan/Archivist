@@ -1,5 +1,6 @@
 #include "StreamWriter.h"
 #include <sstream>
+#include <math.h>
 
 namespace Archivist
 {
@@ -65,9 +66,6 @@ void StreamWriter::Visit( const Float & number )
 	std::ostringstream floatStream;
 	floatStream.precision( std::numeric_limits<long double>::digits10 + 1 );
 	floatStream << number.Value();
-	
-	//TODO: Need to deal with NaN
-
 	stream << "<real>" << floatStream.str() << "</real>" << std::endl;
 }
 

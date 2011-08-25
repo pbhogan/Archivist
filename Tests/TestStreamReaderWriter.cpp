@@ -2,6 +2,7 @@
 #include "Archivist.h"
 using namespace Archivist;
 
+#include <math.h>
 #include <limits>
 using namespace std;
 
@@ -60,6 +61,18 @@ SUITE( StreamReaderWriter )
 		CHECK_EQUAL( Type::Float, u.Type() );
 		CHECK_EQUAL( numeric_limits<float128>::max(), ((Float)u).Value() );
 	}
+	
+	
+	TEST( FloatTypeNaN )
+	{
+		Unknown u;
+		stringstream stream;
+		stream << Float( std::numeric_limits<float128>::quiet_NaN() );
+		stream >> u;
+		CHECK_EQUAL( Type::Float, u.Type() );
+		CHECK( isnan( ((Float)u).Value() ) );
+	}
+	
 	
 	TEST( StringType )
 	{
