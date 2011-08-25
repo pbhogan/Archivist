@@ -98,6 +98,11 @@ public:
 	void VisitWith( Visitor & visitor );
 
 	bool operator == ( const Unknown & unknown ) const;
+
+	bool IsNull( void ) const { return Type() == Type::Null; }
+	bool operator ! ( void ) const { return IsNull(); }
+	bool operator == ( const bool value ) const { return IsNull() != value; }
+	bool operator != ( const bool value ) const { return IsNull() == value; }
 	
 private:
 	class ProxyBase;

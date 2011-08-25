@@ -20,4 +20,14 @@ SUITE( Primitives )
 		CHECK( bitsizeof(float64) == 64 );
 		CHECK( bitsizeof(float128) == 128 );	
 	}
+	
+	
+	TEST( NullIsBooleanFalse )
+	{
+		Unknown u = Null();
+		CHECK( u.IsNull() );
+		CHECK( !u );
+		CHECK( u == false );
+		CHECK( u != true );
+	}
 }
